@@ -1,31 +1,135 @@
-/* top */
+/* navbar */
 
-.vision {
-  margin-top: 100px;
+.navbar {
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: #fff;
+  border-bottom: solid 1px #ccc;
+  position: fixed;
+  z-index: 5;
 }
+  .navbar-link {
+    color: #a1a4aa;
+    display: block;
+    text-decoration: none;
+    padding: 10px 40px 10px 0;
+    height: 30px;
+    &:hover {
+      color: #1aafd0;
+    }
+  }
+  .navbar-right {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+  }
+  .navbar-item {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .navbar-image {
+    max-width: 100px;
+  }
+  .navbar-dropdown {
+    @media $desktop {
+      display: none;
+    }
+    background: #333;
+    color: #eee;
+    position: fixed;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+  }
+    .navbar-dropdown-item {
+      list-style: none;
+      padding-left: 10px;
+      margin: 0;
+    }
+  .navbar-horizontal {
+    display: none;
+    @media $desktop {
+      display: block;
+    }
+    color: #999;
+  }
 
-/* service */
-
-.service-splitter {
-  transform: rotate(-10deg);
-  padding: 20px;
+.u-hamburger {
   @media $desktop {
     display: none;
   }
-}
+  overflow: hidden;
+  top: 10px;
+  width: 20px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
 
-.google-map {
-  max-width: 95%;
-}
-
-.media-group {
-  border-bottom: solid 1px #ccc;
-  padding: 20px 0;
-  &:nth-child(1) {
-    border-top: solid 1px #ccc;
+  &:focus {
+    outline: none;
   }
 }
-.media-date {
-  color: #888;
-  margin-bottom: 0.5em;
+  .u-hamburger-text {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 5px;
+    background: #ccc;
+    width: 30px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: #ccc;
+      content: "";
+    }
+    &::before {
+      top: -10px;
+    }
+    &::after {
+      bottom: -10px;
+    }
+  }
+  .u-hamburger-text.is-active {
+    background: none;
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+/* util */
+.u-page-section {
+  padding: 50px 0 50px 0;
+  min-height: 85vh;
+}
+
+.u-nav-offset {
+  padding-top: 100px;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-bg-info {
+  background-color: $info;
+  color: #fff;
+  h1,h2,h3,h4,h5 {
+    color: #fff;
+  }
 }

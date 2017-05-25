@@ -4,11 +4,11 @@ html(lang='en')
     block title
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width,initial-scale=1')
-    meta(property='og:title', content='株式会社Traimmu')
+    meta(property='og:title', content='Lorem Ipsum')
     meta(property='og:image', content='https://www.traimmu.com/images/logo.jpg')
     meta(name='twitter:card', content='summary_large_image')
-    meta(name='twitter:title', content='株式会社Traimmu')
-    meta(name='twitter:description', content='株式会社Traimmu - 「本当にやりたいことに向かう人を増やす」')
+    meta(name='twitter:title', content='Lorem Ipsum')
+    meta(name='twitter:description', content='Lorem Ipsum')
     meta(name='twitter:image', content='https://www.traimmu.com/images/logo.jpg')
 
     link(href='/loader.css', rel='stylesheet', type='text/css')
@@ -22,15 +22,6 @@ html(lang='en')
         }, 500);
       }, false);
   body
-    #fb-root
-    script.
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.9&appId=669594466473739";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
     #js-loader-cover.loader-window-cover
       .loader loading...
     nav.navbar#js-navbar
@@ -44,16 +35,8 @@ html(lang='en')
           span.u-hamburger-text(:class='{"is-active": dropdownOpened}') toggle menu
         ul.navbar-dropdown(v-if='dropdownOpened')
           li.navbar-dropdown-item
-            a.navbar-link(href='/jobs.html') 採用情報
-          li.navbar-dropdown-item
-            a.navbar-link(href='/about.html') 会社概要
-          li.navbar-dropdown-item
-            a.navbar-link(href='/contact.html') お問い合わせ
+            a.navbar-link(href='#') Menu
         ul.navbar-right.navbar-horizontal
           li.navbar-item
-            a.navbar-link(href='/jobs.html') 採用情報
-          li.navbar-item
-            a.navbar-link(href='/about.html') 会社概要
-          li.navbar-item
-            a.navbar-link(href='/contact.html') お問い合わせ
+            a.navbar-link(href='#') Menu
     block content
