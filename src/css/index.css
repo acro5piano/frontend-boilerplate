@@ -1,0 +1,31 @@
+/* top */
+
+.vision {
+  margin-top: 100px;
+}
+
+/* service */
+
+.service-splitter {
+  transform: rotate(-10deg);
+  padding: 20px;
+  @media $desktop {
+    display: none;
+  }
+}
+
+.google-map {
+  max-width: 95%;
+}
+
+.media-group {
+  border-bottom: solid 1px #ccc;
+  padding: 20px 0;
+  &:nth-child(1) {
+    border-top: solid 1px #ccc;
+  }
+}
+.media-date {
+  color: #888;
+  margin-bottom: 0.5em;
+}

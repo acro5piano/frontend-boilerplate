@@ -1,0 +1,13 @@
+machine:
+  timezone:
+    Asia/Tokyo
+  node:
+    version: 7.4.0
+test:
+  override:
+    - echo "Nothing to do here"
+deployment:
+  production:
+    branch: master
+    commands:
+      - bash deploy.sh
