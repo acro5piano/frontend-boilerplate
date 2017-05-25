@@ -11,7 +11,7 @@ html(lang='en')
     meta(name='twitter:description', content='Lorem Ipsum')
     meta(name='twitter:image', content='https://www.traimmu.com/images/logo.jpg')
 
-    link(href='/loader.css', rel='stylesheet', type='text/css')
+    link(href='./loader.css', rel='stylesheet', type='text/css')
     link(href='//fonts.googleapis.com/css?family=Raleway:400,300,600', rel='stylesheet', type='text/css')
 
     script.
@@ -30,7 +30,7 @@ html(lang='en')
           li.navbar-item
             a.navbar-link(href='/')
               // 後でこれ調整する サイズとか文字とか
-              img.navbar-image(src='/images/logo.jpg')
+              img.navbar-image(src='./images/logo.jpg')
         button.navbar-right.u-hamburger(@click='toggleDropdown')
           span.u-hamburger-text(:class='{"is-active": dropdownOpened}') toggle menu
         ul.navbar-dropdown(v-if='dropdownOpened')
